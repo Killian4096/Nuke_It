@@ -15,7 +15,7 @@ void SOLAR_HANDLER(void){
   reference = analogRead(SOLAR_PIN);
 
   while(counter < WINDOW){
-    if(analogRead(SOLAR_PIN) >= reference){
+    if(analogRead(SOLAR_PIN) >= 1024*(SOLAR_CUTOFF/5.00)){
       STATE=WIN_STATE;
       return;
     }
