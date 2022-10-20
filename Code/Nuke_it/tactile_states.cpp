@@ -7,7 +7,7 @@ extern uint8_t STATE;
 extern uint32_t WINDOW;
 
 void SOLAR_HANDLER(void){
-  int reference;
+  uint16_t reference;
   uint32_t counter;
 
   counter = 0;
@@ -15,7 +15,7 @@ void SOLAR_HANDLER(void){
   reference = analogRead(SOLAR_PIN);
 
   while(counter < WINDOW){
-    if(analogRead(SOLAR_PIN) >= 1024*(SOLAR_CUTOFF/5.00)){
+    if(analogRead(SOLAR_PIN) - reference >= 1024*(SOLAR_CUTOFF/5.00)){
       STATE=WIN_STATE;
       return;
     }
@@ -30,8 +30,11 @@ void WINDMILL_HANDLER(void){
   uint32_t counter;
 
   counter = 0;
+
+  reference = analogRead(WINDMILL_PIN);
+
   while(counter < WINDOW){
-    if(digitalRead(WINDMILL_PIN)){
+    if(analogRead(WINDMILL_PIN) >= 1024*(WINDMILL_CUTOFF/5.00)){
       STATE=WIN_STATE;
       return;
     }
