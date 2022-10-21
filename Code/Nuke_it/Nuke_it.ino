@@ -23,7 +23,7 @@ void setup() {
   
   STATE = START_STATE;
 
-  Serial.begin(9600);
+  //Serial.begin(9600);
 }
 
 void loop() {

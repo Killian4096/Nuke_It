@@ -17,9 +17,9 @@
 #define WINDMILL_PIN A1
 #define NUCLEAR_PIN A2
 
+#define SOUND_PIN 3
+
 #define LIGHT_PIN 7
-#define SOUND_PIN 8
-#define RELAY_PIN 9
 
 //Debug
 #define DEBUG_WIN 5
@@ -27,10 +27,10 @@
 
 
 //Solar Settings
-#define SOLAR_CUTOFF 1.0
+#define SOLAR_CUTOFF 205 //Normalize between 0 and 1024
 
 //Windmill Settings
-#define WINDMILL_CUTOFF = 0.7
+#define WINDMILL_CUTOFF  72
 
 //Nuclear Settings
 
