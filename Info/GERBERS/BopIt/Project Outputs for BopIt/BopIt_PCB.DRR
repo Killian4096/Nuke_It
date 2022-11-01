@@ -1,0 +1,20 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: BopIt_PCB.PcbDoc   10/21/2022  10:55:00 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : BopIt_PCB.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      26mil (0.65mm)                                            Round             12        PTH        4.97inch (126.22mm)
+T2      28mil (0.701mm)                                           Round             7         PTH        1.38inch (35.09mm)
+T3      32mil (0.8mm)                                             Round             3         PTH        0.15inch (3.91mm)
+T4      34mil (0.851mm)                                           Round             2         PTH        0.20inch (5.00mm)
+T5      35mil (0.899mm)                                           Round             28        PTH        4.00inch (101.60mm)
+T6      43mil (1.1mm)                                             Round             5         PTH        0.76inch (19.30mm)
+T7      51mil (1.295mm)                                           Round             20        PTH        13.32inch (338.43mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              77
+
+Total Processing Time (hh:mm:ss) : 00:00:00
