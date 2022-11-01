@@ -30,6 +30,7 @@ void SOLAR_HANDLER(void){
   return;
 }
 
+
 void WINDMILL_HANDLER(void){
   uint32_t counter;
 

@@ -33,7 +33,6 @@ void setup() {
 
   //Serial.begin(9600);
 }
-
 void loop() {
   switch(STATE){
     //Start State

@@ -5,5 +5,4 @@ void SOLAR_HANDLER(void);
 void WINDMILL_HANDLER(void);
 void NUCLEAR_HANDLER(void);
 
-
 #endif

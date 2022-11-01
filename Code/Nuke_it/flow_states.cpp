@@ -8,6 +8,7 @@ extern uint8_t STATE;
 extern uint8_t SCORE;
 extern uint32_t WINDOW;
 
+
 void START_HANDLER(void){
 
   update_lights();
