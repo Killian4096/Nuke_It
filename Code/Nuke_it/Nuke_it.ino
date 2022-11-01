@@ -3,8 +3,12 @@
 #include "tactile_states.h"
 #include <Adafruit_NeoPixel.h>
 #include <avr/power.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include "Adafruit_LEDBackpack.h"
 
 Adafruit_NeoPixel NeoPixel(LIGHT_NUM, LIGHT_PIN, NEO_GRB + NEO_KHZ800);
+Adafruit_7segment clockDisplay = Adafruit_7segment();
 
 //State Identifier
 uint8_t STATE;
@@ -13,8 +17,12 @@ uint32_t WINDOW;
 
 void setup() {
   //DEBUG STUFF
-  pinMode(DEBUG_WIN, OUTPUT);
-  pinMode(DEBUG_LOSS, OUTPUT);
+  //pinMode(DEBUG_WIN, OUTPUT);
+  //pinMode(DEBUG_LOSS, OUTPUT);
+  randomSeed(analogRead(A3));
+
+
+  clockDisplay.begin();
 
   //Clear
   NeoPixel.begin();

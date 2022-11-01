@@ -11,6 +11,8 @@ void SOLAR_HANDLER(void){
   uint32_t counter;
 
   //Sound
+  tone(SOUND_PIN, 300, 250);
+  delay(250);
 
   counter = 0;
 
@@ -31,6 +33,10 @@ void SOLAR_HANDLER(void){
 void WINDMILL_HANDLER(void){
   uint32_t counter;
 
+  tone(SOUND_PIN, 300, 83);
+  delay(166);
+  tone(SOUND_PIN, 300, 83);
+
   counter = 0;
 
   while(counter < WINDOW){
@@ -47,6 +53,12 @@ void WINDMILL_HANDLER(void){
 
 void NUCLEAR_HANDLER(void){
   uint32_t counter;
+
+  tone(SOUND_PIN, 300, 50);
+  delay(100);
+  tone(SOUND_PIN, 300, 50);
+  delay(100);
+  tone(SOUND_PIN, 300, 50);
 
   counter = 0;
   while(counter < WINDOW){

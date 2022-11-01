@@ -9,6 +9,8 @@ extern uint8_t SCORE;
 extern uint32_t WINDOW;
 
 void START_HANDLER(void){
+
+  update_lights();
   
   //Initialization if needed, most likely to add delay here
 
@@ -24,20 +26,16 @@ void START_HANDLER(void){
 void SELECT_HANDLER(void){
   
   //RNG HERE, for now we will work out solar logic
-  STATE = NUCLEAR_STATE;
+  STATE = random(SOLAR_STATE,NUCLEAR_STATE+1);
   return;
 }
 
 void WIN_HANDLER(void){
-  update_lights();
-  tone(SOUND_PIN, 300, 1000);
-  digitalWrite(DEBUG_WIN, 1);
-  delay(1000);
-  digitalWrite(DEBUG_WIN, 0);
-  delay(1000);
-
   WINDOW = WINDOW - DECREMENT_WINDOW;
   SCORE++;
+  update_lights();
+  tone(SOUND_PIN, 300, 500);
+  delay(1000);
 
   if(SCORE==ROUNDS){
     STATE = VICTORY_STATE;
@@ -48,16 +46,12 @@ void WIN_HANDLER(void){
 }
 
 void LOSS_HANDLER(void){
-  //Hold here, reset button must be pressed
-  tone(SOUND_PIN, 300, 250);
-  delay(500);
-  tone(SOUND_PIN, 300, 250);
-  delay(500);
+  //Hold here, reset must be pressed
   while(1){
-    digitalWrite(DEBUG_LOSS, 1);
-    delay(333);
-    digitalWrite(DEBUG_LOSS, 0);
-    delay(333);
+    tone(SOUND_PIN, 200, 250);
+    delay(250);
+    tone(SOUND_PIN, 40, 250);
+    delay(250);
   }
 }
 
@@ -66,10 +60,10 @@ void VICTORY_HANDLER(void){
 
   //Hold here, reset must be pressed
   while(1){
-    digitalWrite(DEBUG_WIN, 1);
-    delay(300);
-    digitalWrite(DEBUG_WIN, 0);
-    delay(300);
+    tone(SOUND_PIN, 400, 250);
+    delay(500);
+    tone(SOUND_PIN, 400, 250);
+    delay(500);
   }
 }
 

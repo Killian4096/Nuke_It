@@ -27,7 +27,7 @@
 
 
 //Solar Settings
-#define SOLAR_CUTOFF 205 //Normalize between 0 and 1024
+#define SOLAR_CUTOFF 51 //Normalize between 0 and 1024
 
 //Windmill Settings
 #define WINDMILL_CUTOFF  72
@@ -36,7 +36,7 @@
 
 //Window Settings
 #define START_WINDOW 2000
-#define DECREMENT_WINDOW 1
+#define DECREMENT_WINDOW 200
 #define ROUNDS 10
 
 //Sound Settings
