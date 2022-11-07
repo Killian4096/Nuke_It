@@ -42,12 +42,12 @@
 //Sound Settings
 
 //Lights
-#define LIGHT_NUM 8
+#define LIGHT_NUM 1
 
 //Color
-#define RED    8
-#define GREEN  0
-#define BLUE   8
+#define RED    255
+#define GREEN  255
+#define BLUE   204
 
 
 #endif

@@ -13,8 +13,9 @@ extern Adafruit_7segment clockDisplay;
 void update_lights(void){
   clockDisplay.print(SCORE, DEC);
   clockDisplay.writeDisplay();
-  uint8_t s = (float)SCORE/((float)ROUNDS/(float)(LIGHT_NUM+1));
+  /*uint8_t s = (float)SCORE/((float)ROUNDS/(float)(LIGHT_NUM+1));
   if(s==0){return;}
-  NeoPixel.setPixelColor(s-1, NeoPixel.Color(RED, GREEN, BLUE));
+  NeoPixel.setPixelColor(s-1, NeoPixel.Color(RED, GREEN, BLUE));*/
+  NeoPixel.setPixelColor(0, NeoPixel.Color(RED, GREEN, BLUE));
   NeoPixel.show();
 }
