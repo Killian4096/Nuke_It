@@ -35,8 +35,13 @@ void WIN_HANDLER(void){
   WINDOW = WINDOW - DECREMENT_WINDOW;
   SCORE++;
   update_lights();
-  tone(SOUND_PIN, 300, 500);
-  delay(1000);
+  tone(SOUND_PIN, 300, 100);
+  delay(100);
+  tone(SOUND_PIN, 400, 100);
+  delay(100);
+  tone(SOUND_PIN, 500, 100);
+  delay(100);
+  delay(500);
 
   if(SCORE==ROUNDS){
     STATE = VICTORY_STATE;
@@ -48,11 +53,14 @@ void WIN_HANDLER(void){
 
 void LOSS_HANDLER(void){
   //Hold here, reset must be pressed
+  tone(SOUND_PIN, 150, 250);
+  delay(250);
+  tone(SOUND_PIN, 100, 250);
+  delay(250);
+  tone(SOUND_PIN, 50, 250);
+  delay(250);
   while(1){
-    tone(SOUND_PIN, 200, 250);
-    delay(250);
-    tone(SOUND_PIN, 40, 250);
-    delay(250);
+    delay(1000);
   }
 }
 
@@ -60,11 +68,18 @@ void VICTORY_HANDLER(void){
   //Game win state
 
   //Hold here, reset must be pressed
+  for(int i=0;i<3;i++){
+    tone(SOUND_PIN, 300, 150);
+    delay(300);
+    tone(SOUND_PIN, 300, 150);
+    delay(150);
+    tone(SOUND_PIN, 130, 150);
+    delay(150);
+    tone(SOUND_PIN, 450, 500);
+    delay(500);
+  }
   while(1){
-    tone(SOUND_PIN, 400, 250);
-    delay(500);
-    tone(SOUND_PIN, 400, 250);
-    delay(500);
+    delay(1000);
   }
 }
 

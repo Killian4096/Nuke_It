@@ -36,18 +36,33 @@
 
 //Window Settings
 #define START_WINDOW 2000
-#define DECREMENT_WINDOW 200
-#define ROUNDS 10
+#define DECREMENT_WINDOW 20
+#define ROUNDS 15
 
-//Sound Settings
 
 //Lights
-#define LIGHT_NUM 1
+#define LIGHT_NUM 15
 
 //Color
-#define RED    255
-#define GREEN  255
-#define BLUE   204
+#define RED    128
+#define GREEN  128
+#define BLUE   100
 
+//LIGHT CONFIG
+#define LIGHT_T_1  1
+#define LIGHT_T_2  2
+#define LIGHT_T_3  3
+#define LIGHT_T_4  4
+#define LIGHT_T_5  5
+#define LIGHT_T_6  6
+#define LIGHT_T_7  7
+#define LIGHT_T_8  8
+#define LIGHT_T_9  9
+#define LIGHT_T_10 10
+#define LIGHT_T_11 11
+#define LIGHT_T_12 12
+#define LIGHT_T_13 13
+#define LIGHT_T_14 14
+#define LIGHT_T_15 15
 
 #endif
